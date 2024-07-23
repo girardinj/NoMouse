@@ -1,0 +1,3 @@
+[submodule "nomouse/src/lib/system-hook"]
+	path = nomouse/src/lib/system-hook
+	url = git@github.com:kristian/system-hook.git
