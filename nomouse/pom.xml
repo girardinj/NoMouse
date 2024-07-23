@@ -13,4 +13,16 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+
+
+    <dependencies>
+    
+
+        <dependency>
+            <groupId>lc.kra.system</groupId>
+            <artifactId>system-hook</artifactId>
+            <version>3.8</version>
+        </dependency>
+
+    </dependencies>
 </project>
