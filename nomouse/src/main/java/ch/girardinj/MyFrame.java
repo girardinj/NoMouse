@@ -13,8 +13,6 @@ public class MyFrame extends JFrame {
         this.setSize(WIDTH, HEIGHT);
 
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        
     }
 
 }
