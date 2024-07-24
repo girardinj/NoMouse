@@ -105,12 +105,12 @@ public class MouseController {
             robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
     }
 
-    public void middleClickPress() {
+    public void MiddleClickPress() {
         if (isRunning())
             robot.mousePress(InputEvent.BUTTON2_DOWN_MASK);
     }
 
-    public void middleClickRelease() {
+    public void MiddleClickRelease() {
         if (isRunning())
             robot.mouseRelease(InputEvent.BUTTON2_DOWN_MASK);
     }

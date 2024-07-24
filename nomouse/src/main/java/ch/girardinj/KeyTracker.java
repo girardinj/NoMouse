@@ -28,7 +28,7 @@ public class KeyTracker {
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_X)
                     mouseController.RightClickPress();
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_S)
-                    mouseController.RightClickPress();
+                    mouseController.MiddleClickPress();
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_UP)
                     mouseController.SetUpArrow(true);
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_DOWN)
@@ -62,7 +62,7 @@ public class KeyTracker {
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_X)
                     mouseController.RightClickRelease();
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_S)
-                    mouseController.RightClickRelease();
+                    mouseController.MiddleClickRelease();
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_UP)
                     mouseController.SetUpArrow(false);
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_DOWN)
