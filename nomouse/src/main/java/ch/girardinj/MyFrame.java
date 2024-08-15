@@ -29,27 +29,21 @@ public class MyFrame extends JFrame {
         this.setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
         
         ArrayList<JLabel> labels = new ArrayList<>();
-        JLabel isActivatedLabel = new JLabel();
+        JLabel isActivatedLabel = new JLabel(" "); // It must have smth inside else when packing "this.pack()" is isn't concidered here and the size will be wrong
         labels.add(isActivatedLabel);
         labels.add(new JLabel("<html><font color='red'>[T]</font> to activate</html>"));
-        labels.add(new JLabel("<html><font color='red'>[arrow keys]</font> to move</html>"));
-        labels.add(new JLabel("<html><font color='red'>[ctrl]</font> to move faster</html>"));
-        labels.add(new JLabel("<html><font color='red'>[alt]</font> to move slower</html>"));
+        labels.add(new JLabel("<html><font color='red'>[arrow keys | WASD]</font> to move</html>"));
+        labels.add(new JLabel("<html><font color='red'>[shift]</font> to move faster</html>"));
+        labels.add(new JLabel("<html><font color='red'>[ctrl]</font> to move slower</html>"));
         labels.add(new JLabel("<html><font color='red'>[Y]</font> to left click</html>"));
         labels.add(new JLabel("<html><font color='red'>[X]</font> to right click</html>"));
-        labels.add(new JLabel("<html><font color='red'>[S]</font> to middle click</html>"));
+        labels.add(new JLabel("<html><font color='red'>[C]</font> to middle click</html>"));
 
         Font font = new Font("Calibri", Font.PLAIN, 16);
         for (JLabel label : labels) {
             label.setFont(font);
             this.add(label);
         }
-
-        this.getRootPane().setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
-        this.setIconImage(new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB_PRE)); // transparent icon
-        this.pack();
-        this.setResizable(false);
-        this.setLocationRelativeTo(null); // center on screen
 
         try {
             this.keyTracker = new KeyTracker();
@@ -62,6 +56,13 @@ public class MyFrame extends JFrame {
         } catch (AWTException e) {
             System.exit(-1);
         }
+
+
+        this.getRootPane().setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+        this.setIconImage(new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB_PRE)); // transparent icon
+        this.pack();
+        this.setResizable(true);
+        this.setLocationRelativeTo(null); // center on screen
 
         this.keyTracker.start();
         this.setVisible(true);

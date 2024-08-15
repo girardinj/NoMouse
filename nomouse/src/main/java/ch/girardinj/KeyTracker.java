@@ -23,23 +23,24 @@ public class KeyTracker {
 			@Override 
 			public void keyPressed(GlobalKeyEvent event) {
 
+                // change to a switch case
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_Y)
                     mouseController.LeftClickPress();
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_X)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_X)
                     mouseController.RightClickPress();
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_S)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_C)
                     mouseController.MiddleClickPress();
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_UP)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_UP || event.getVirtualKeyCode() == GlobalKeyEvent.VK_W)
                     mouseController.SetUpArrow(true);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_DOWN)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_DOWN || event.getVirtualKeyCode() == GlobalKeyEvent.VK_S)
                     mouseController.SetDownArrow(true);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_LEFT)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_LEFT || event.getVirtualKeyCode() == GlobalKeyEvent.VK_A)
                     mouseController.SetLeftArrow(true);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_RIGHT)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_RIGHT || event.getVirtualKeyCode() == GlobalKeyEvent.VK_D)
                     mouseController.SetRightArrow(true);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_CONTROL)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_SHIFT)
                     mouseController.setSpeedMultiplier(10);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_MENU)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_CONTROL)
                     mouseController.setSpeedMultiplier(1);
                     
 			}
@@ -57,23 +58,24 @@ public class KeyTracker {
                         listener.activated(mouseController.isRunning());
                     }
                 }
+                // change to a switch case
                 if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_Y)
                     mouseController.LeftClickRelease();
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_X)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_X)
                     mouseController.RightClickRelease();
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_S)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_C)
                     mouseController.MiddleClickRelease();
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_UP)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_UP || event.getVirtualKeyCode() == GlobalKeyEvent.VK_W)
                     mouseController.SetUpArrow(false);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_DOWN)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_DOWN || event.getVirtualKeyCode() == GlobalKeyEvent.VK_S)
                     mouseController.SetDownArrow(false);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_LEFT)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_LEFT || event.getVirtualKeyCode() == GlobalKeyEvent.VK_A)
                     mouseController.SetLeftArrow(false);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_RIGHT)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_RIGHT || event.getVirtualKeyCode() == GlobalKeyEvent.VK_D)
                     mouseController.SetRightArrow(false);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_CONTROL)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_SHIFT)
                     mouseController.setSpeedMultiplier(5);
-                if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_MENU)
+                else if (event.getVirtualKeyCode() == GlobalKeyEvent.VK_CONTROL)
                     mouseController.setSpeedMultiplier(5);
             }
         });
