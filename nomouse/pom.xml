@@ -17,7 +17,6 @@
 
     <dependencies>
     
-
         <dependency>
             <groupId>lc.kra.system</groupId>
             <artifactId>system-hook</artifactId>
@@ -25,4 +24,28 @@
         </dependency>
 
     </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <finalName>noMouse</finalName>
+          <appendAssemblyId>false</appendAssemblyId>
+          <outputDirectory>${project.basedir}</outputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
